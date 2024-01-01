@@ -31,6 +31,8 @@ type LimitCofig struct {
 
 // 一个任务实例，
 type Task struct {
+	Options
+
 	Visited     map[string]bool
 	VisitedLock sync.Mutex
 
@@ -38,7 +40,6 @@ type Task struct {
 	Closed bool
 
 	Rule RuleTree
-	Options
 }
 
 func NewTask(opts ...Option) *Task {

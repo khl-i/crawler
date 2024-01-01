@@ -10,6 +10,9 @@ const urlListRe = `(https://www.douban.com/group/topic/[0-9a-z]+/)"[^>]*>([^<]+)
 const ContentRe = `<div class="topic-content">[\s\S]*?阳台[\s\S]*?<div class="aside">`
 
 var DoubangroupTask = &spider.Task{
+	Options: spider.Options{
+		Name: "douban group",
+	},
 	Rule: spider.RuleTree{
 		Root: func() ([]*spider.Request, error) {
 			var roots []*spider.Request
