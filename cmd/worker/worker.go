@@ -65,8 +65,7 @@ func init() {
 		&PProfListenAddress, "pprof", ":9981", "set pprof address")
 
 	WorkerCmd.Flags().BoolVar(
-		&cluster, "cluster", true, "run mode")
-
+		&cluster, "cluster", false, "run mode")
 }
 
 var cluster bool
