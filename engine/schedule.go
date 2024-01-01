@@ -152,6 +152,8 @@ type CrawlerStore struct {
 }
 
 type Crawler struct {
+	options
+
 	id          string
 	out         chan spider.ParseResult
 	Visited     map[string]bool
@@ -164,7 +166,6 @@ type Crawler struct {
 	rlock     sync.Mutex
 
 	etcdCli *clientv3.Client
-	options
 }
 
 type Scheduler interface {
