@@ -1,14 +1,15 @@
 package doubanbook
 
 import (
-	"github.com/dreamerjackson/crawler/limiter"
-	"github.com/dreamerjackson/crawler/spider"
-	"golang.org/x/time/rate"
 	"regexp"
 	"strconv"
 	"time"
 
+	"github.com/dreamerjackson/crawler/limiter"
+	"github.com/dreamerjackson/crawler/spider"
+
 	"go.uber.org/zap"
+	"golang.org/x/time/rate"
 )
 
 var DoubanBookTask = &spider.Task{
