@@ -168,6 +168,7 @@ type Crawler struct {
 	etcdCli *clientv3.Client
 }
 
+// 调度器
 type Scheduler interface {
 	Schedule()
 	Push(...*spider.Request)

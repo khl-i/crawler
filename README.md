@@ -1,5 +1,18 @@
-# 极客时间分布式爬虫项目（未完结）
-本仓库为笔者在极客时间开设的分布式爬虫项目资料，课程的细节可看: [开篇词｜聚沙成塔，构建高性能、分布式爬虫项目](https://time.geekbang.org/column/article/579719)
+# 分布式爬虫项目
+ [开篇词｜聚沙成塔，构建高性能、分布式爬虫项目](https://time.geekbang.org/column/article/579719)
+
+# 代码梳理
+
+```go
+//爬虫主类
+Crawler::CreateWork
+```
+
+```
+Task
+```
+
+
 
 # 编码规范
 

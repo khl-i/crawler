@@ -29,7 +29,6 @@ type LimitCofig struct {
 	Bucket     int // 桶大小
 }
 
-// 一个任务实例，
 type Task struct {
 	Options
 
