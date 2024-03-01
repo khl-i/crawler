@@ -1,6 +1,8 @@
 # 分布式爬虫项目
  [开篇词｜聚沙成塔，构建高性能、分布式爬虫项目](https://time.geekbang.org/column/article/579719)
 
+![img](./README.assets/34bb4694656be44e26956c453a62581d.jpg)
+
 # 代码梳理
 
 ```go
@@ -11,6 +13,12 @@ Crawler::CreateWork
 ```
 Task
 ```
+
+## go micro
+
+## grpc
+
+protoc-gen-grpc-gateway
 
 # 编码规范
 

@@ -3,12 +3,17 @@ package master
 import (
 	"context"
 	"fmt"
+	"net/http"
+	"strconv"
+	"time"
+
 	"github.com/dreamerjackson/crawler/cmd/worker"
 	"github.com/dreamerjackson/crawler/generator"
 	"github.com/dreamerjackson/crawler/log"
 	"github.com/dreamerjackson/crawler/master"
 	proto "github.com/dreamerjackson/crawler/proto/crawler"
 	"github.com/dreamerjackson/crawler/spider"
+
 	grpccli "github.com/go-micro/plugins/v4/client/grpc"
 	"github.com/go-micro/plugins/v4/config/encoder/toml"
 	"github.com/go-micro/plugins/v4/registry/etcd"
@@ -31,9 +36,6 @@ import (
 	"go.uber.org/zap/zapcore"
 	grpc2 "google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-	"net/http"
-	"strconv"
-	"time"
 )
 
 var MasterCmd = &cobra.Command{
@@ -149,7 +151,6 @@ type ServerConfig struct {
 }
 
 func RunGRPCServer(m *master.Master, logger *zap.Logger, reg registry.Registry, cfg ServerConfig) {
-
 	b := ratelimit.NewBucketWithRate(0.5, 1)
 	if masterID == "" {
 		if podIP != "" {
